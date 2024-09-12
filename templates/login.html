@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topnav">
+        <a href="https://library.bixal.com/">
+            <div>
+                <img src="https://library.bixal.com/uploads/images/system/2021-05/bixal-logo-black-white-06.png" height="70px" width="70px">
+            </div>
+        </a>
+    </div>
+    <div class="container">
+        <form action="/login" method="post">
+            <h1>Login</h1>
+
+            <label for="username">Username:
+            <input type="text" id="username" name="username" required></label>
+            
+            <label for="password">Password:
+            <input type="password" id="password" name="password" required></label>
+            
+            <input type="submit" value="Login">
+        </form>
+    </div>
+    {% if status %}
+        <div class="container-status">
+            <p>Incorrect Username or Password. Please try again.</p>
+        </div>
+    {% endif %}
+</body>
+</html>

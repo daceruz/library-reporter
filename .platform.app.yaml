@@ -1,0 +1,25 @@
+name: flask-library-reporter
+type: python:3.12
+
+dependencies:
+    python3:
+      requests: "2.32.3"
+      pandas: "2.2.2"
+      openpyxl: "3.1.5"
+      aiohttp: "3.9.5"
+      python-dotenv: "1.0.1"
+      flask: "3.0.3"
+
+disk: 1024
+
+mounts:
+    '/reports':
+        source: local
+        source_path: reports
+
+web:
+  # Commands are run once after deployment to start the application process.
+  # More information: https://docs.platform.sh/create-apps/app-reference.html#web-commands
+  commands:
+    # The command to launch your app. If it terminates, it’s restarted immediately.
+    start: flask --app flask-library-reporter run -p $PORT

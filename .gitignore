@@ -1,0 +1,4 @@
+.env
+./reports/library-report.xlsx
+./__pycache__/
+./__pycache__/flask-library-reporter.cpython-312.pyc

@@ -1,0 +1,105 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Oxygen, Ubuntu, Roboto, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    size: 14px;
+    color: rgb(60, 58, 58);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f2f2f2;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #f2f2f2;
+    color: rgb(60, 58, 58);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 300px;
+    height: 350px;
+    margin-top: 50%;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 1px #d1d1d1;
+}
+.container-status {
+    width: 260px;
+    height: 70px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 70px;
+    background-color: #c41333;
+    border-radius: 20px;
+    box-shadow: 0 0 5px 1px black;
+    color: black;
+}
+
+form {
+    width: 300px;
+    height: 350px;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: rgb(36, 35, 35);
+}
+
+h2 {
+    font-size: 1.5rem;
+    align-self:flex-start;
+}
+
+p {
+    font-size: 0.90rem;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #172c6a;
+    position: fixed;
+    width: 100%;
+    height: 83px;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensures navbar stays on top */
+}
+
+.topnav a {
+    float: left;
+    text-align: center;
+    padding: 7px 7px;
+    text-decoration: none;
+    font-size: 17px;
+    height: 100%;
+    width: 80px;
+    color: white;
+}
+
+.topnav a.split {
+    float: right;
+    padding: 30px 30px;
+    width: 80px;
+}
+
+.topnav a:hover {
+    background-color: #1e3887;
+}
+
+a > button {
+    width: 100px;
+}

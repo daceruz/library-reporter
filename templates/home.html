@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bixal Library Reporter</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+    <!-- Custom Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="topnav">
+        <a href="https://library.bixal.com/">
+            <div>
+                <img src="https://library.bixal.com/uploads/images/system/2021-05/bixal-logo-black-white-06.png" height="70px" width="70px">
+            </div>
+        </a>
+        <a href="logout" class="split">Logout</a>
+    </div>
+    <div class="main-container">
+        <h1>Welcome to the Bixal Library Reporter</h1>
+        <p>
+            This website is designed to scan the Bixal Library Website and produce a multitude of reports. When the button below is pressed, the script will start by setting up dictionaries to make connections between datapoints such as page ids to page names, page ids to book ids, etc, to be used later during the creation of the reports. 
+        </p>
+        <p>
+            After the dictionaries are created, each report will start generating one by one. Each will gather all neccesary information for its report via the API endpoint, will add columns, reformat and reorder all the data to be easily readable by the user. These reports are then combined into one excel file for the user to download.
+        </p>
+        <button onclick="startReports()" id="run-button">Run</button>
+        <div id="progress-display">
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+</body>
+</html>
